@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "a9PUok4phdQa2peSLGM4f/QNaKkl6VCYm54punf1WM/k+XKQMqY9RR6BETvhlcNapKNFYwuV+zpWupW9Dax8tw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Acer Nitro\\Downloads\\01. CSharp-OOP-Inheritance-Exercise-Skeleton\\Restaurant\\Restaurant.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Acer Nitro\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Acer Nitro\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

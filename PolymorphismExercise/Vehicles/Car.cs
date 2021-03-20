@@ -8,8 +8,8 @@ namespace Vehicles
     {
         private const double CarAirConditionerModifer = 0.9;
 
-        public Car(double fuel, double fuelConsumation) 
-            : base(CarAirConditionerModifer, fuel, fuelConsumation)
+        public Car(double fuel, double fuelConsumation,double tankCapacity) 
+            : base(CarAirConditionerModifer, fuel,tankCapacity, fuelConsumation)
         {
         }
 

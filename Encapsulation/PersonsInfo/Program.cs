@@ -22,20 +22,26 @@ namespace PersonsInfo
                                             decimal.Parse(cmdArgs[3]));
                     persons.Add(person);
                 }
-                catch (ArgumentException ex)
+                catch (Exception ex)
                 {
 
-                    Console.WriteLine(ex.Message);
+                    //Console.WriteLine(ex.Message);
                 };
 
 
 
             }
-            var parcentage = decimal.Parse(Console.ReadLine());
-            persons.ForEach(p => p.IncreaseSalary(parcentage));
-            persons.ForEach(p => Console.WriteLine(p.ToString()));
+            Team team = new Team("SoftUni");
+
+            foreach (Person person in persons)
+            {
+                team.AddPlayer(person);
+            }
 
 
+            Console.WriteLine($"First team has {team.FirstTeam.Count} players.");
+
+            Console.WriteLine($"Reserve team has {team.ReserveTeam.Count} players.");
         }
     }
 }

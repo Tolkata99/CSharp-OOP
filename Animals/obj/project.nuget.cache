@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JnrgP+AqhxivKeQUVNda61ZHeJf9Uel8uu2DE+MfK6D3I9L1IdMq8ULrsyZsD2W+rJKM1qBNk9ZD2cInMZ4AIw==",
+  "dgSpecHash": "ckGvdluGiwX63mCSUQ1/1QTcb+lg7VVe19QtS7vfRiaoe2d6uFWrAwdy6oYVNXCE567dsFF2xZEr5GVCCC05PQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Acer Nitro\\Documents\\GitHub\\C#OOP\\CSharp.OOP\\01. CSharp-OOP-Inheritance-Exercise-Skeleton\\Animals\\Animals.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Acer Nitro\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\Acer Nitro\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\Acer Nitro\\Documents\\GitHub\\OOOP\\CShapr-OOP\\Animals\\Animals.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

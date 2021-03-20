@@ -14,7 +14,7 @@ namespace Animals
 
         public override string ExplainSelf()
         {
-            return base.ExplainSelf() + Environment.NewLine + "MEEOW";
+            return base.ExplainSelf() + Environment.NewLine + "MeEOW";
         }
     }
 }

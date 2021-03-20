@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Acer Nitro\\Downloads\\01. CSharp-OOP-Inheritance-Exercise-Skeleton\\Restaurant\\Restaurant.csproj",
+      "projectUniqueName": "C:\\Users\\Acer Nitro\\Documents\\GitHub\\OOOP\\CShapr-OOP\\Restaurant\\Restaurant.csproj",
       "projectName": "Restaurant",
-      "projectPath": "C:\\Users\\Acer Nitro\\Downloads\\01. CSharp-OOP-Inheritance-Exercise-Skeleton\\Restaurant\\Restaurant.csproj",
+      "projectPath": "C:\\Users\\Acer Nitro\\Documents\\GitHub\\OOOP\\CShapr-OOP\\Restaurant\\Restaurant.csproj",
       "packagesPath": "C:\\Users\\Acer Nitro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Acer Nitro\\Downloads\\01. CSharp-OOP-Inheritance-Exercise-Skeleton\\Restaurant\\obj\\",
+      "outputPath": "C:\\Users\\Acer Nitro\\Documents\\GitHub\\OOOP\\CShapr-OOP\\Restaurant\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Acer Nitro\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -55,16 +55,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"

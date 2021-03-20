@@ -6,15 +6,19 @@ namespace Vehicles
 {
     public class Truck : Vehicle
     {
-        private const double AirConditionerModifer = 1.6;
+        private new const double AirConditionerModifer = 1.6;
 
-        public Truck(double fuel, double fuelConsumation) 
-            : base(fuel, fuelConsumation, AirConditionerModifer)
+        public Truck(double fuel, double fuelConsumation,double tankCapacity) 
+            : base(fuel, fuelConsumation, tankCapacity, AirConditionerModifer)
         {
         }
 
         public override void ReFuel(double amount)
         {
+            if(amount + base.Fuel > base.TankCapacity)
+            {
+                base.ReFuel(amount);
+            }
             base.ReFuel(amount * 0.95);
         }
 

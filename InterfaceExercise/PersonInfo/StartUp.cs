@@ -8,59 +8,48 @@ namespace PersonInfo
     {
         public static void Main()
         {
-            List<IBirdThday> identification = new List<IBirdThday>();
+            List<IPerson> result = new List<IPerson>();
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+                string[] parts = Console.ReadLine().Split();
+
+                if(parts.Length == 3)
+                {
+                    IPerson rebel = new Rebel(parts[0], int.Parse(parts[1]), parts[2]);
+                    result.Add(rebel);
+                }
+                else if(parts.Length == 4)
+                {
+                    IPerson citizen = new Citizen(parts[0], int.Parse(parts[1]), parts[2], parts[3]);
+                    result.Add(citizen);
+                }
+            }
 
             while (true)
             {
-                string partsLoop = Console.ReadLine();
-
-                if (partsLoop == "End")
+                string name = Console.ReadLine();
+                if(name == "End")
                 {
                     break;
                 }
 
-                string[] parts = partsLoop.Split();
-
-                if (parts.Length == 5)
+                foreach (var names in result)
                 {
-                    string name = parts[1];
-                    int age = int.Parse(parts[2]);
-                    string id = parts[3];
-                    string birdDay = parts[4];
-
-                    identification.Add(new Citizen(name, age, id, birdDay));
-                }
-                else if(parts.Length == 3)
-                {
-                    string name = parts[1];
-                    string data = parts[2];
-
-                    IBirdThday pet = new Pet(data, name);
-
-                    identification.Add(pet);
+                    if(names.Name == name)
+                    {
+                        names.BuyFood();
+                    }
                 }
 
             }
-
-            string year = Console.ReadLine();
-
-            var birdDayDateValid = identification
-                .Where(i => i.BirdDay
-                .EndsWith(year))
-                .ToList();
-
-            foreach (var item in birdDayDateValid)
+            int food = 0;
+            foreach (var item in result)
             {
-                Console.WriteLine(item.BirdDay);
-                
-                
+                food += item.Food;
             }
-
-            if(birdDayDateValid.Count < 1)
-            {
-                string empty = string.Empty;
-                
-            }
+            Console.WriteLine(food);
         }
 
     }

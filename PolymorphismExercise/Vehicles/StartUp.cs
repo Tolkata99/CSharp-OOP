@@ -8,6 +8,7 @@ namespace Vehicles
         {
             Vehicle car = CreateVehicle();
             Vehicle truck = CreateVehicle();
+            Vehicle bus = CreateVehicle();
 
             int n = int.Parse(Console.ReadLine());
 
@@ -18,43 +19,62 @@ namespace Vehicles
                 string vehicleType = parts[1];
                 double parameter = double.Parse(parts[2]);
 
-                if (comand == "Drive")
-                {
-                    try
-                    {
-                        if (vehicleType == nameof(Car))
-                        {
-                            car.Drive(parameter);
 
-                        }
-                        else if (vehicleType == nameof(Truck))
-                        {
-                            truck.Drive(parameter);
-                        }
-                        Console.WriteLine($"{vehicleType} travelled {parameter} km");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-                }
-                else if (comand == "Refuel")
-                {
+                try
+                {               
                     if (vehicleType == nameof(Car))
                     {
-                        car.ReFuel(parameter);
-
+                        proccesComand(car, comand, parameter);
                     }
-                    else if (vehicleType == nameof(Truck))
+                    else if (vehicleType == nameof(Bus))
                     {
-                        truck.ReFuel(parameter);
+                        proccesComand(bus, comand, parameter);
                     }
-
+                    else
+                    {
+                        proccesComand(truck, comand, parameter);
+                    }
                 }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
 
             }
             Console.WriteLine(car);
             Console.WriteLine(truck);
+            Console.WriteLine(bus);
+        }
+
+        private static void proccesComand(Vehicle vehicle, string comand, double parameter)
+        {
+            if (comand == "Drive")
+            {
+
+                vehicle.Drive(parameter);
+
+                Console.WriteLine($"{vehicle.GetType().Name} travelled {parameter} km");
+
+
+            }
+            else if (comand == "DriveEmpty")
+            {
+
+                Bus vehicle1 = ((Bus)vehicle);
+                vehicle1.TurnOffConditionerBus();
+
+                vehicle.Drive(parameter);
+
+                vehicle1.TurnOnConditionerBus();
+
+
+            }
+            else if (comand == "Refuel")
+            {
+                vehicle.ReFuel(parameter);
+
+            }
         }
 
         private static Vehicle CreateVehicle()
@@ -63,15 +83,21 @@ namespace Vehicles
             string type = parts[0];
             double fuelQuantity = double.Parse(parts[1]);
             double fuelConsumation = double.Parse(parts[2]);
+            double tankCapacity = double.Parse(parts[3]);
+
 
             Vehicle vehicle = null;
             if (type == nameof(Car))
             {
-                vehicle = new Car(fuelQuantity, fuelConsumation);
+                vehicle = new Car(fuelQuantity, fuelConsumation, tankCapacity);
             }
             else if (type == nameof(Truck))
             {
-                vehicle = new Truck(fuelConsumation, fuelQuantity);
+                vehicle = new Truck(fuelConsumation, fuelQuantity, tankCapacity);
+            }
+            else if (type == nameof(Bus))
+            {
+                vehicle = new Bus(fuelConsumation, fuelQuantity, tankCapacity);
             }
 
             return vehicle;

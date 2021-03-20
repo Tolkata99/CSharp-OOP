@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jssmFKlPR1HLz2UMRUFlK/idmk5RoS3nS1Upb1tZNYYx582z6ShR6KzU77OpMLQiafQqlnlI9d3F6hG0shPPJg==",
+  "dgSpecHash": "RR/HFSPmBAgncZ4AN0I6qGx4sykv0FZsiaLXMHe3E+WmfLNMAzouY/btUKHyZHvRuM2DJKq94Mwzg8QVcYbBmw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Acer Nitro\\Documents\\GitHub\\C#OOP\\CSharp.OOP\\01. CSharp-OOP-Inheritance-Exercise-Skeleton\\NeedForSpeed\\NeedForSpeed.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Acer Nitro\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\Acer Nitro\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\Acer Nitro\\Documents\\GitHub\\OOOP\\CShapr-OOP\\NeedForSpeed\\NeedForSpeed.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

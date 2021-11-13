@@ -1,30 +1,18 @@
-﻿using CommandPattern.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CommandPattern
+﻿
+namespace ValidationAttributes
 {
-    public class Person
+    public class Person 
     {
-        private const int minAge = 12;
-        private const int maxAge = 90;
-
-
-
         public Person(string name,int age)
         {
-            this.Name = name;
             this.Age = age;
-        }
-
-
+            this.FullName = name;
+        } 
 
         [MyRequired]
-        public string  Name { get; set; }
+        public string FullName { get; set; }
 
-
-        [MyRange(minAge,maxAge)]
+        [MyRange(12,90)]
         public int Age { get; set; }
     }
 }

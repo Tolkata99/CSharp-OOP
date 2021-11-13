@@ -1,37 +1,37 @@
-﻿using CommandPattern.Attributes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace CommandPattern
+namespace ValidationAttributes
 {
     public static class Validator
     {
         public static bool IsValid(object obj)
         {
-            var properties = obj.GetType().GetProperties();
 
-            foreach (var prop in properties)
+            PropertyInfo[] properties = obj
+                .GetType()
+                .GetProperties();
+
+            foreach (PropertyInfo property in properties)
             {
-                var arttributes = prop.GetCustomAttributes().Cast<MyValidationAttribute>().ToArray();
+                 IEnumerable<MyValidationAttribute> propertyCustomAttribute = property 
+                    .GetCustomAttributes()
+                    .Where(x => x is MyValidationAttribute)
+                    .Cast<MyValidationAttribute>();
 
-                var value = prop.GetValue(obj);
-
-                foreach (var atribute in arttributes)
+                foreach (MyValidationAttribute attribute in propertyCustomAttribute)
                 {
-                   bool isValid = atribute.IsValid(value);
+                    bool result = attribute.IsValid(property.GetValue(obj));
 
-                    if(!isValid)
+                    if(!result)
                     {
                         return false;
                     }
                 }
-
             }
-
-            
 
             return true;
         }

@@ -1,12 +1,17 @@
 ﻿using System;
 
-namespace CommandPattern
+namespace ValidationAttributes
 {
     public class StartUp
     {
         public static void Main(string[] args)
         {
-            var person = new Person(null,11);
+            var person = new Person
+             (
+                 "pesjo",
+                 15
+             );
+            
 
             bool isValidEntity = Validator.IsValid(person);
 

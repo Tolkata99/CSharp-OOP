@@ -19,7 +19,7 @@ namespace BookingApp.Models.Rooms
         public double PricePerNight
         {
             get => this.pricerNight;
-            set
+            private set
             {
                 if (value < 0)
                 {
